@@ -1,43 +1,54 @@
-# CryptoWatch
+# 📊 CryptoWatch — Real-Time Crypto Intelligence Dashboard
 
-Real-time cryptocurrency dashboard with 50+ assets, portfolio tracking, and email price alerts.
+> Live dashboard tracking 50+ crypto assets with interactive historical charts, portfolio profit/loss tracking, and automated email price alerts.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000?style=flat&logo=flask&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen)
+
+---
 
 ## Features
 
-- 📊 **Live Market Data** — Track 50+ cryptocurrencies with real-time prices
-- 📈 **Interactive Charts** — 7d, 30d, 90d historical price charts via Chart.js
-- 💼 **Portfolio Calculator** — Add holdings, track profit/loss in multiple currencies
-- 🔔 **Price Alerts** — Set above/below triggers with email notifications
-- 🔍 **Search** — Find any coin from 10,000+ supported assets
-- 📱 **Responsive** — Works on desktop and mobile
+- **Real-Time Tracking** — Live prices for 50+ crypto assets via CoinGecko API
+- **Historical Charts** — Interactive 7d/30d/90d price charts using Chart.js
+- **Portfolio Tracker** — Multi-currency portfolio with buy price, current value, and P/L calculation
+- **Price Alerts** — Configurable email alerts via SMTP when price crosses thresholds
+- **Multi-Currency** — Support for USD, EUR, INR, and other fiat currencies
+- **Responsive UI** — Clean dashboard that works on desktop and mobile
+
+---
 
 ## Tech Stack
 
-- **Backend:** Python, Flask
-- **API:** CoinGecko (free, no key required)
-- **Charts:** Chart.js
-- **Database:** SQLite
-- **Alerts:** SMTP email notifications
+| Component | Technology |
+|-----------|-----------|
+| Backend | Python, Flask |
+| Data Source | CoinGecko API |
+| Charts | Chart.js |
+| Alerts | SMTP (email) |
+| Frontend | HTML, CSS, JavaScript |
 
-## API Endpoints
+---
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/markets` | Top 50 coins by market cap |
-| GET | `/api/coin/<id>` | Detailed coin data |
-| GET | `/api/chart/<id>?days=7` | Historical price data |
-| GET/POST/DELETE | `/api/portfolio` | Portfolio CRUD |
-| GET/POST/DELETE | `/api/alerts` | Price alert CRUD |
-| GET | `/api/search?q=bitcoin` | Search coins |
-
-## Setup
+## Quick Start
 
 ```bash
-pip install flask requests
+git clone https://github.com/ansariazad/CryptoWatch.git
+cd CryptoWatch
+pip install -r requirements.txt
+
+# Set email for alerts (optional)
+export SMTP_EMAIL="your-email@gmail.com"
+export SMTP_PASSWORD="your-app-password"
+
 python app.py
-# Open http://localhost:5000
 ```
+
+Dashboard available at: http://localhost:5000
+
+---
 
 ## Author
 
-**Azad Ansari** — [Portfolio](https://ansariazad.github.io) · [GitHub](https://github.com/ansariazad)
+**Azad Ansari** · [Portfolio](https://ansariazad.github.io/hire.html) · [GitHub](https://github.com/ansariazad) · [LinkedIn](https://linkedin.com/in/azad-ansari-902035297)
